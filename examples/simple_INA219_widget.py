@@ -88,31 +88,27 @@ class BatteryMonitor(QWidget):
             margin: 0.5px;
             }""")
 
-        if percentage < 80:
+        if percentage > 80:
             self.batteryLevel.setStyleSheet("""QProgressBar::chunk{
             background: green;
             width: 2.15px;
             margin: 0.5px;
             }""")
-        elif percentage < 50:
+        elif percentage > 50:
             self.batteryLevel.setStyleSheet("""QProgressBar::chunk{
             background: orange;
             width: 4px;
             margin: 0.5px;
             }""")
-        elif percentage < 25:
+        elif percentage > 30:
             self.batteryLevel.setStyleSheet("""QProgressBar::chunk{
             background: red;
             width: 2.15px;
             margin: 0.5px;
             }""")
-        elif percentage > 25:
-            self.batteryLevel.setStyleSheet("""QProgressBar::chunk{
-            background: red;
-            width: 2.15px;
-            margin: 0.5px;
-            }""")
+        elif percentage == 20:
             speak("battery low")
+
         elif percentage == 1:
             self.batteryLevel.setStyleSheet("""QProgressBar::chunk{
             background: red;
