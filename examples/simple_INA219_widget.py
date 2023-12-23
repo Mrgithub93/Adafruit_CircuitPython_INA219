@@ -1,3 +1,4 @@
+#just a simple battery indicator widget i made for my 4s lipo to my robot using the INA219 module
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QHBoxLayout, QProgressBar, QDesktopWidget
 from PyQt5.QtCore import QTimer, Qt
